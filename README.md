@@ -1,4 +1,6 @@
 # ForgeAnnotationConfig
+Work in progress. This library is not ready for release yet.
+
 An annotation-based wrapper library for Minecraft Forge 1.8.9's mod configuration system (the file format and the GUI). This library allows you to create configuration for your mods.
 
 ![Planned features](https://github.com/taj-ny/ForgeAnnotationConfig/projects/1)
