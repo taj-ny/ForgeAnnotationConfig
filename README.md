@@ -1,4 +1,4 @@
-# ForgeAnnotationConfig
+# ForgeAnnotationConfig ![](https://img.shields.io/jitpack/v/github/taj-ny/ForgeAnnotationConfig) ![](https://jitpack.io/v/taj-ny/ForgeAnnotationConfig/month.svg) ![](https://jitpack.io/v/taj-ny/ForgeAnnotationConfig/week.svg)
 Work in progress. This library is not ready for release yet.
 
 An annotation-based wrapper library for Minecraft Forge 1.8.9's mod configuration system (the file format and the GUI). This library allows you to create configuration for your mods.
