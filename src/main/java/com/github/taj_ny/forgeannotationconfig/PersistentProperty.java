@@ -2,7 +2,6 @@ package com.github.taj_ny.forgeannotationconfig;
 
 import lombok.SneakyThrows;
 import lombok.var;
-import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.reflect.MethodUtils;

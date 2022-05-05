@@ -16,7 +16,7 @@ minecraft {
     version = "1.8.9-11.15.1.2318-1.8.9"
     runDir = "run"
     mappings = "stable_22"
-    makeObfSourceJar = false
+    makeObfSourceJar = true
 }
 
 configurations {
@@ -26,7 +26,7 @@ configurations {
 }
 
 dependencies {
-    compile 'org.projectlombok:lombok:1.18.22'
+    compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
 
     testCompileOnly 'org.projectlombok:lombok:1.18.22'
@@ -53,24 +53,9 @@ shadowJar {
     duplicatesStrategy DuplicatesStrategy.EXCLUDE
 }
 
-task delombok {
-    description 'Delomboks the source code'
-    ant.taskdef(classname: 'lombok.delombok.ant.Tasks$Delombok', classpath: configurations.compile.asPath,  name: 'delombok')
-    ant.mkdir(dir: 'build/src-delomboked')
-    ant.delombok(verbose: 'true', encoding: 'UTF-8', to: 'build/src-delomboked', from: 'src/main/java')
-}
-
-task sourcesJar(type: Jar, dependsOn: delombok) {
-    archiveClassifier = "sources"
-    from 'build/src-delomboked'
-    archiveFileName = "${archivesBaseName}-${version}-sources.jar"
-}
-
 reobf {
     shadowJar {}
 }
-
-shadowJar.dependsOn sourcesJar
 
 jar.dependsOn shadowJar
 jar.enabled = false
@@ -80,10 +65,6 @@ publishing {
     publications {
         maven(MavenPublication) {
             artifact shadowJar
-        }
-        sources(MavenPublication) {
-            artifact sourcesJar
-            artifactId = "${archivesBaseName}-sources"
         }
     }
 }
