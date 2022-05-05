@@ -79,8 +79,11 @@ jar.enabled = false
 publishing {
     publications {
         maven(MavenPublication) {
-            artifact sourcesJar
             artifact shadowJar
+        }
+        sources(MavenPublication) {
+            artifact sourcesJar
+            artifactId = "${archivesBaseName}-sources"
         }
     }
 }
