@@ -7,7 +7,7 @@ import com.github.taj_ny.forgeannotationconfig.element.property.PropertyConfigEl
 import com.github.taj_ny.forgeannotationconfig.typeadapter.ArrayListTypeAdapter;
 import com.github.taj_ny.forgeannotationconfig.typeadapter.TypeAdapter;
 import com.github.taj_ny.forgeannotationconfig.validator.IValidator;
-import com.google.gson.reflect.TypeToken;
+import com.github.taj_ny.forgeannotationconfig.util.TypeToken;;
 import lombok.Getter;
 import lombok.SneakyThrows;
 import lombok.var;

@@ -2,7 +2,7 @@ package com.github.taj_ny.forgeannotationconfig.typeadapter;
 
 import com.github.taj_ny.forgeannotationconfig.Config;
 import com.github.taj_ny.forgeannotationconfig.Utils;
-import com.google.gson.reflect.TypeToken;
+import com.github.taj_ny.forgeannotationconfig.util.TypeToken;;
 
 import java.lang.reflect.Array;
 

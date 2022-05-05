@@ -10,7 +10,7 @@ import com.github.taj_ny.forgeannotationconfig.typeadapter.ArrayTypeAdapter;
 import com.github.taj_ny.forgeannotationconfig.typeadapter.PrimitiveArrayTypeAdapter;
 import com.github.taj_ny.forgeannotationconfig.typeadapter.PrimitiveTypeAdapter;
 import com.github.taj_ny.forgeannotationconfig.typeadapter.TypeAdapter;
-import com.google.gson.reflect.TypeToken;
+import com.github.taj_ny.forgeannotationconfig.util.TypeToken;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
@@ -19,6 +19,9 @@ public class ConfigElementFactory {
     public static PropertyConfigElement createPropertyElement(Config config, Field field,
                                                               ConfigProperty fieldAnnotation,
                                                               ConfigCategory categoryAnnotation, Object instance) {
+        // It would be easier to just use the field instead of a TypeToken, but in the future I want to implement a
+        // method for manually reading values from persistent configuration, and in that case it won't always be
+        // possible to get the type from a field, because it may not exist anymore.
         TypeToken typeToken = field.getGenericType() instanceof ParameterizedType // is field type generic?
                 ? TypeToken.getParameterized(field.getType(), ((ParameterizedType) field.getGenericType())
                 .getActualTypeArguments())

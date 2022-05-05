@@ -1,7 +1,7 @@
 package com.github.taj_ny.forgeannotationconfig.typeadapter;
 
 import com.github.taj_ny.forgeannotationconfig.Config;
-import com.google.gson.reflect.TypeToken;
+import com.github.taj_ny.forgeannotationconfig.util.TypeToken;
 import lombok.Getter;
 import lombok.SneakyThrows;
 

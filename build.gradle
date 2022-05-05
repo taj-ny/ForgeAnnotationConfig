@@ -33,8 +33,6 @@ dependencies {
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
 
     include 'org.apache.commons:commons-lang3:3.12.0'
-
-    include 'com.google.code.gson:gson:2.8.0'
 }
 
 
