@@ -1,7 +1,5 @@
 package com.github.taj_ny.forgeannotationconfig.entry.array;
 
-import com.github.taj_ny.forgeannotationconfig.Utils;
-import com.github.taj_ny.forgeannotationconfig.element.property.PropertyConfigElement;
 import net.minecraftforge.fml.client.config.GuiEditArray;
 import net.minecraftforge.fml.client.config.GuiEditArrayEntries;
 import net.minecraftforge.fml.client.config.IConfigElement;

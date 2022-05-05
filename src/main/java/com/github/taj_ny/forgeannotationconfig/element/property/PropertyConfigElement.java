@@ -1,6 +1,9 @@
 package com.github.taj_ny.forgeannotationconfig.element.property;
 
-import com.github.taj_ny.forgeannotationconfig.*;
+import com.github.taj_ny.forgeannotationconfig.Config;
+import com.github.taj_ny.forgeannotationconfig.ConfigCategory;
+import com.github.taj_ny.forgeannotationconfig.ConfigProperty;
+import com.github.taj_ny.forgeannotationconfig.PersistentProperty;
 import com.github.taj_ny.forgeannotationconfig.element.ConfigElement;
 import com.github.taj_ny.forgeannotationconfig.typeadapter.TypeAdapter;
 import com.github.taj_ny.forgeannotationconfig.validator.IValidator;

@@ -7,7 +7,6 @@ import lombok.SneakyThrows;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.reflect.MethodUtils;
 
-import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 
 public class PrimitiveArrayTypeAdapter<T> extends TypeAdapter<Object, T[]> {

@@ -7,13 +7,10 @@ import com.github.taj_ny.forgeannotationconfig.entry.DoubleEntry;
 import com.github.taj_ny.forgeannotationconfig.entry.IntegerEntry;
 import com.github.taj_ny.forgeannotationconfig.entry.StringEntry;
 import com.github.taj_ny.forgeannotationconfig.typeadapter.TypeAdapter;
-import lombok.SneakyThrows;
 import net.minecraftforge.fml.client.config.GuiConfigEntries;
 import net.minecraftforge.fml.client.config.GuiEditArrayEntries;
-import org.apache.commons.lang3.reflect.MethodUtils;
 
 import java.lang.reflect.Field;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 

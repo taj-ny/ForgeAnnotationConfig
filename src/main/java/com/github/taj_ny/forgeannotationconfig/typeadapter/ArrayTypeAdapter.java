@@ -3,13 +3,8 @@ package com.github.taj_ny.forgeannotationconfig.typeadapter;
 import com.github.taj_ny.forgeannotationconfig.Config;
 import com.github.taj_ny.forgeannotationconfig.Utils;
 import com.google.gson.reflect.TypeToken;
-import lombok.SneakyThrows;
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.reflect.MethodUtils;
 
 import java.lang.reflect.Array;
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 
 /**
  * Adds support for arrays of objects.

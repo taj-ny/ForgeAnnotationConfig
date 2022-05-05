@@ -4,27 +4,20 @@ import com.github.taj_ny.forgeannotationconfig.element.CategoryConfigElement;
 import com.github.taj_ny.forgeannotationconfig.element.ConfigElement;
 import com.github.taj_ny.forgeannotationconfig.element.ConfigElementFactory;
 import com.github.taj_ny.forgeannotationconfig.element.property.PropertyConfigElement;
-import com.github.taj_ny.forgeannotationconfig.element.property.SingleConfigElement;
-import com.github.taj_ny.forgeannotationconfig.exception.IllegalTypeException;
 import com.github.taj_ny.forgeannotationconfig.typeadapter.ArrayListTypeAdapter;
 import com.github.taj_ny.forgeannotationconfig.typeadapter.TypeAdapter;
 import com.github.taj_ny.forgeannotationconfig.validator.IValidator;
-import com.google.common.io.Files;
 import com.google.gson.reflect.TypeToken;
 import lombok.Getter;
-import lombok.NonNull;
 import lombok.SneakyThrows;
 import lombok.var;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.config.IConfigElement;
-import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.reflect.FieldUtils;
 
 import javax.annotation.Nullable;
 import java.io.File;
-import java.io.IOException;
 import java.lang.reflect.Field;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 @ConfigCategory(name = "general")

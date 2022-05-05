@@ -1,7 +1,5 @@
 package com.github.taj_ny.forgeannotationconfig.entry;
 
-import com.github.taj_ny.forgeannotationconfig.Utils;
-import com.github.taj_ny.forgeannotationconfig.element.property.PropertyConfigElement;
 import net.minecraftforge.fml.client.config.GuiConfig;
 import net.minecraftforge.fml.client.config.GuiConfigEntries;
 import net.minecraftforge.fml.client.config.IConfigElement;

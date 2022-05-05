@@ -5,8 +5,6 @@ import com.google.gson.reflect.TypeToken;
 import lombok.Getter;
 import lombok.SneakyThrows;
 
-import java.util.UUID;
-
 /**
  * Converts a value from type A to B. Used for adding support for types other than the types supported by Forge. All
  * registered type adapters need to have a constructor that takes {@link Config} and {@link TypeToken} as parameters.

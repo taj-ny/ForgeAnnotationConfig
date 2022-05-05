@@ -3,7 +3,6 @@ package com.github.taj_ny.forgeannotationconfig.element;
 import com.github.taj_ny.forgeannotationconfig.Config;
 import com.github.taj_ny.forgeannotationconfig.ConfigCategory;
 import com.github.taj_ny.forgeannotationconfig.ConfigProperty;
-import com.github.taj_ny.forgeannotationconfig.Utils;
 import com.github.taj_ny.forgeannotationconfig.element.property.ArrayConfigElement;
 import com.github.taj_ny.forgeannotationconfig.element.property.PropertyConfigElement;
 import com.github.taj_ny.forgeannotationconfig.element.property.SingleConfigElement;
@@ -12,7 +11,6 @@ import com.github.taj_ny.forgeannotationconfig.typeadapter.PrimitiveArrayTypeAda
 import com.github.taj_ny.forgeannotationconfig.typeadapter.PrimitiveTypeAdapter;
 import com.github.taj_ny.forgeannotationconfig.typeadapter.TypeAdapter;
 import com.google.gson.reflect.TypeToken;
-import lombok.var;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;

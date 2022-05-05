@@ -1,13 +1,8 @@
 package com.github.taj_ny.forgeannotationconfig;
 
-import com.github.taj_ny.forgeannotationconfig.element.property.PropertyConfigElement;
 import com.github.taj_ny.forgeannotationconfig.typeadapter.PrimitiveTypeAdapter;
-import lombok.SneakyThrows;
-import net.minecraft.client.gui.GuiTextField;
-import org.apache.commons.lang3.reflect.MethodUtils;
 
 import java.lang.reflect.Array;
-import java.util.Arrays;
 
 public class Utils {
     /**

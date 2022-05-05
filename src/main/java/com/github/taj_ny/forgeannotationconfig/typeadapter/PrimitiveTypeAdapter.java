@@ -3,7 +3,6 @@ package com.github.taj_ny.forgeannotationconfig.typeadapter;
 import com.github.taj_ny.forgeannotationconfig.Config;
 import com.google.gson.reflect.TypeToken;
 
-import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
 

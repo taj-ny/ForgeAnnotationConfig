@@ -1,6 +1,5 @@
 package com.github.taj_ny.forgeannotationconfig;
 
-import com.github.taj_ny.forgeannotationconfig.typeadapter.TypeAdapter;
 import com.github.taj_ny.forgeannotationconfig.validator.IValidator;
 import net.minecraftforge.fml.client.config.*;
 

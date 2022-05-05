@@ -1,8 +1,6 @@
 package com.github.taj_ny.forgeannotationconfig.element;
 
 import com.github.taj_ny.forgeannotationconfig.Config;
-import com.google.gson.TypeAdapter;
-import com.google.gson.reflect.TypeToken;
 import lombok.Getter;
 import lombok.experimental.Accessors;
 import net.minecraftforge.fml.client.config.IConfigElement;
