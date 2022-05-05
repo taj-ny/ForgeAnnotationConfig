@@ -5,7 +5,7 @@ plugins {
     id "net.minecraftforge.gradle.forge" version "6f53277"
 }
 
-version = "1.0"
+version = "1.0.0-alpha"
 group = "com.github.taj_ny"
 archivesBaseName = "ForgeAnnotationConfig"
 
@@ -34,7 +34,7 @@ dependencies {
 
     include 'org.apache.commons:commons-lang3:3.12.0'
 
-    include ('com.google.code.gson:gson:2.8.0')
+    include 'com.google.code.gson:gson:2.8.0'
 }
 
 
