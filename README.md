@@ -17,7 +17,7 @@ repositories {
 Then add the dependency.
 ```groovy
 dependencies {
-    implementation 'com.github.taj-ny:ForgeAnnotationConfig:1.0.0-alpha'
+    implementation 'com.github.taj-ny:ForgeAnnotationConfig:v1.0.0-alpha'
 }
 ```
 
