@@ -7,9 +7,6 @@ import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Adds support for primitives.
- */
 public class PrimitiveTypeAdapter extends TypeAdapter<Object, Object> {
     /**
      * Primitive types and their respective wrappers.

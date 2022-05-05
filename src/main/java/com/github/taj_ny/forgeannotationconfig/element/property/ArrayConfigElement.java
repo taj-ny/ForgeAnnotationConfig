@@ -26,7 +26,6 @@ public class ArrayConfigElement<T, S> extends PropertyConfigElement<T, S> {
      */
     protected static final Map<Class<?>, Class<? extends GuiEditArrayEntries.IArrayEntry>> defaultArrayGuiEntries
             = new HashMap<Class<?>, Class<? extends GuiEditArrayEntries.IArrayEntry>>() {{
-        put(Boolean.class, GuiEditArrayEntries.BooleanEntry.class);
         put(Double.class, DoubleArrayEntry.class);
         put(Integer.class, IntegerArrayEntry.class);
         put(String.class, StringArrayEntry.class);

@@ -54,6 +54,7 @@ public class PersistentProperty {
             property = forgeConfig.get(category, name, (String[]) defaultValue, comment, isListLengthFixed,
                     maxListLength, validationPattern);
         }
+        property.comment = comment;
     }
 
     /**

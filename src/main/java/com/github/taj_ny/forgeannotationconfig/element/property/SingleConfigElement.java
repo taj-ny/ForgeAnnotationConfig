@@ -26,7 +26,6 @@ public class SingleConfigElement<T, S> extends PropertyConfigElement<T, S> {
      */
     private static final Map<Class<?>, Class<? extends GuiConfigEntries.IConfigEntry>> entries
             = new HashMap<Class<?>, Class<? extends GuiConfigEntries.IConfigEntry>>() {{
-//        put(Boolean.class, GuiConfigEntries.BooleanEntry.class);
         put(Double.class, DoubleEntry.class);
         put(Integer.class, IntegerEntry.class);
         put(String.class, StringEntry.class);

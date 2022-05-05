@@ -12,9 +12,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 
 /**
- * Adds support for arrays of objects and primitives.
- * @param <A> Can be a primitive array
- * @param <B>
+ * Adds support for arrays of objects.
  */
 public class ArrayTypeAdapter<A, B> extends TypeAdapter<A[], B[]> {
     private final TypeAdapter<A, B> componentTypeAdapter;

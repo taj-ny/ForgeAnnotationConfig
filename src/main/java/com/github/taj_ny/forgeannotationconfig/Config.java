@@ -29,43 +29,30 @@ import java.util.*;
 
 @ConfigCategory(name = "general")
 public abstract class Config {
-    private static final SimpleDateFormat BACKUP_DATE_FORMAT = new SimpleDateFormat("ddMMyyyy-HHmmss");
-
-    /**
-     * Currently does nothing. May be used in the future.
-     */
-    @Getter
-    private int version = 0;
-
-    private final File file;
+    private final Map<Class, Class<? extends TypeAdapter>> registeredTypeAdapters = new HashMap<Class, Class<?
+            extends TypeAdapter>>() {{
+        put(List.class, ArrayListTypeAdapter.class);
+    }};
+    private final Map<Class, IValidator> registeredValidators = new HashMap<>();
 
     /**
      * Forge's persistent configuration, stored in {@link #file}.
      */
     @Getter
     private final Configuration persistentConfiguration;
+    private final File file;
 
     private final List<ConfigElement> configElements = new ArrayList<>();
-    private final Map<Class, Class<? extends TypeAdapter>> registeredTypeAdapters = new HashMap<Class, Class<?
-            extends TypeAdapter>>() {{
-                put(List.class, ArrayListTypeAdapter.class);
-    }};
-    private final Map<Class, IValidator> registeredValidators = new HashMap<>();
 
     private boolean isInitialized;
 
     /**
-     * @param file The file where configuration will be stored.
+     * @param file The file where persistent configuration will be stored.
      */
     public Config(File file) {
         this.file = file;
-        this.persistentConfiguration = new Configuration(file);
-        this.persistentConfiguration.load();
-    }
-
-    public Config(File file, int version) {
-        this(file);
-        this.version = version;
+        persistentConfiguration = new Configuration(file);
+        persistentConfiguration.load();
     }
 
     /**
@@ -86,7 +73,7 @@ public abstract class Config {
         if (element instanceof CategoryConfigElement) {
             element.getChildElements().forEach(e -> load((ConfigElement) e));
         } else if (element instanceof PropertyConfigElement) {
-            Object value = ((PropertyConfigElement) element).getPersistentProperty().get();
+            var value = ((PropertyConfigElement) element).getPersistentProperty().get();
             if (element.isList()) {
                 element.set((Object[]) value);
             } else {
@@ -107,7 +94,7 @@ public abstract class Config {
         if (element instanceof CategoryConfigElement) {
             element.getChildElements().forEach(e -> save((ConfigElement) e));
         } else if (element instanceof PropertyConfigElement) {
-            PropertyConfigElement property = (PropertyConfigElement) element;
+            var property = (PropertyConfigElement) element;
             if (property.isList()) {
                 property.getPersistentProperty().set(element.getList());
             } else {
@@ -131,7 +118,8 @@ public abstract class Config {
 
     /**
      * Registers a global validator that will be applied to all fields of the specified type T, overridden by
-     * {@link ConfigProperty#validator()}. If a validator already exists for the specified type, it will be overwritten.
+     * {@link ConfigProperty#validator()}. If a global validator already exists for the specified type, it will be
+     * overwritten.
      * @throws IllegalStateException If the configuration has been initialized.
      */
     public void registerValidator(Class<?> type, IValidator validator) throws IllegalStateException {
@@ -142,6 +130,10 @@ public abstract class Config {
         registeredValidators.put(type, validator);
     }
 
+    /**
+     * Attempts to get a type adapter for the specified type.
+     * @return An instance of the type adapter, or null if no type adapter was found.
+     */
     @Nullable
     @SneakyThrows
     public TypeAdapter getTypeAdapter(Class type, TypeToken typeToken) {
@@ -189,7 +181,7 @@ public abstract class Config {
      */
     @SneakyThrows
     @Nullable
-    protected ConfigElement registerCategory(@NonNull Class clazz, @NonNull Object instance,
+    private ConfigElement registerCategory(Class clazz, Object instance,
                                              ConfigCategory categoryAnnotation) {
         persistentConfiguration.setCategoryComment(categoryAnnotation.name(), categoryAnnotation.comment());
         List<ConfigElement> childElements = new ArrayList<>();
@@ -222,5 +214,4 @@ public abstract class Config {
     public List<IConfigElement> getConfigElements() {
         return (List) configElements;
     }
-
 }

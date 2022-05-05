@@ -24,7 +24,8 @@ import com.github.taj_ny.forgeannotationconfig.element.property.PropertyConfigEl
  */
 public interface IValidator {
     /**
-     * Validates user input. Thrown exceptions will be caught and
+     * Validates user input. Any exceptions thrown by this method will be caught and will result in the value not
+     * being valid.
      * @param value User input. If the default config entries for integers and doubles are used, this parameter will
      *              always have a valid number value.
      * @return Whether the value is valid.

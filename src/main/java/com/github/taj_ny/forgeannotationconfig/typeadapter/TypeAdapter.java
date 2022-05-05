@@ -5,9 +5,28 @@ import com.google.gson.reflect.TypeToken;
 import lombok.Getter;
 import lombok.SneakyThrows;
 
+import java.util.UUID;
+
 /**
  * Converts a value from type A to B. Used for adding support for types other than the types supported by Forge. All
- * registered type adapters have to have a constructor that takes {@link Config} and {@link TypeToken} as parameters.
+ * registered type adapters need to have a constructor that takes {@link Config} and {@link TypeToken} as parameters.
+ * <br><br>
+ * Example:
+ * <pre><code>class UUIDTypeAdapter extends TypeAdapter{@code <UUID, String>} {
+ *     public UUIDTypeAdapter(Config config, TypeToken type) {
+ *         super(config, type, UUID.class, String.class);
+ *     }
+ *
+ *    {@literal @}Override
+ *     public UUID toA(String s) {
+ *         return UUID.fromString(s);
+ *     }
+ *
+ *    {@literal @}Override
+ *     public String toB(UUID uuid) {
+ *         return uuid.toString();
+ *     }
+ * }</code></pre>
  */
 public abstract class TypeAdapter<A, B> {
     protected final Config config;

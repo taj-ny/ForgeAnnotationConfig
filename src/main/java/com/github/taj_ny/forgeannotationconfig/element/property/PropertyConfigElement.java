@@ -26,8 +26,6 @@ public abstract class PropertyConfigElement<T, S> extends ConfigElement {
         put(String.class, ConfigGuiType.STRING);
     }};
 
-
-
     /**
      * An instance of the class containing the field.
      */
@@ -193,9 +191,6 @@ public abstract class PropertyConfigElement<T, S> extends ConfigElement {
         this.persistentProperty.set(value);
     }
 
-    /**
-     * [Property, Category] Is this object a property object?
-     */
     @Override
     public boolean isProperty() {
         return true;
@@ -210,6 +205,4 @@ public abstract class PropertyConfigElement<T, S> extends ConfigElement {
     public List<IConfigElement> getChildElements() {
         return null;
     }
-
-
 }
