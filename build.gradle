@@ -61,7 +61,7 @@ task delombok {
 }
 
 task sourcesJar(type: Jar, dependsOn: delombok) {
-    classifier = "sources"
+    archiveClassifier = "sources"
     from 'build/src-delomboked'
     archiveFileName = "${archivesBaseName}-${version}-sources.jar"
 }
