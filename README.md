@@ -7,8 +7,19 @@ An annotation-based wrapper library for Minecraft Forge 1.8.9's mod configuratio
 
 ![Example mod](https://github.com/taj-ny/ForgeAnnotationConfigExample)
 
-# Getting started
-A tutorial for setting everything up can be found on the wiki: https://github.com/taj-ny/ForgeAnnotationConfig/wiki/Getting-started.
+# Installation
+Add the JitPack repository to your build.gradle file if you haven't.
+```groovy
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+```
+Then add the dependency.
+```groovy
+dependencies {
+    implementation 'com.github.taj-ny:ForgeAnnotationConfig:1.0.0-alpha'
+}
+```
 
 # Features
 - Configuration class serialization/deserialization.
