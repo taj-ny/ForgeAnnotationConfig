@@ -70,6 +70,8 @@ reobf {
     shadowJar {}
 }
 
+shadowJar.dependsOn sourcesJar
+
 jar.dependsOn shadowJar
 jar.enabled = false
 
